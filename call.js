@@ -69,23 +69,80 @@
 // getPost();
 
 //POST
-const postPost = async () => {
-  try {
-    const response = await fetch("http://localhost:3000/posts", {
-      method: "POST",
-      headers: {
-        "Content-type": "application/json"
-      },
-      body: JSON.stringify({
-        id: "3",
-        title: "EDGAR",
-        author: "CRACKDONA"
-      })
+// const postPost = async () => {
+//   try {
+//     const response = await fetch("http://localhost:3000/posts", {
+//       method: "POST",
+//       headers: {
+//         "Content-type": "application/json"
+//       },
+//       body: JSON.stringify({
+//         id: "3",
+//         title: "EDGAR",
+//         author: "CRACKDONA"
+//       })
+//     })
+//     const data = await response.json()
+//     console.log(data, "Se agregó un nuevo elemento");
+//   } catch (error) {
+//     console.error(error)
+//   }
+// }
+// postPost();
+
+//PUT
+// const putPost = async() => {
+//   try{
+//     const response = await fetch ("http://localhost:3000/posts/2", {
+//       method : "PUT",
+//       headers: {
+//         "Content-type" : "application/json"
+//       },
+//       body: JSON.stringify({
+//         id: "2",
+//         title: "PEPE",
+//         author: "QUINTANA"
+//       })
+//     })
+//     const data = await response.json
+//     console.log(data, "Se actualizó correctamente")
+//   }catch (error){
+//     console.error(error)
+//   }
+// }
+// putPost();
+
+//PATCH
+// const patchPost = async () => {
+//   try{
+//     const response = await fetch ("http://localhost:3000/posts/3",{
+//       method : "PATCH",
+//       headers: {
+//         "Content-type" : "application/json"
+//       },
+//       body: JSON.stringify({
+//         title: "EMPE"
+//       })
+//     })
+//     const data = await response.json
+//     console.log (data, "Se modificó parcialmente")
+//   }catch(error){
+//     console.error(error)
+//   }
+// };
+// patchPost();
+
+//DELETE
+const deletePost = async () =>{
+  try{
+    const response = await fetch("http://localhost:3000/posts/3", {
+      method : "DELETE"
     })
-    const data = await response.json()
-    console.log(data, "Se agregó un nuevo elemento");
-  } catch (error) {
+    const data = await response.json
+    console.log(data , "Se eliminó correctamente")
+  }catch(error){
     console.error(error)
   }
 }
-postPost();
+
+deletePost();
